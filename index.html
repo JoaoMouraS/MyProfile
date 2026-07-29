@@ -1,0 +1,857 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>João's Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="Portfolio.css">
+</head>
+
+<body>
+
+    <div class="loader-screen" id="loader">
+        <div class="loader-container">
+            <div class="hack-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title">BUILD PROCESS INITIALIZATION</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">hgdc@workspace:~/portfolio$</span>
+                        <span class="command">npm run build && start-server</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="output">[INFO] Compiling modules...</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="output">[INFO] Building robust Java/Spring Boot backend: <span
+                                class="success">ACTIVE</span></span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="output">[INFO] Optimizing Angular frontend assets: <span
+                                class="success">ONLINE</span></span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="output success">[SUCCESS] System ready. Launching application.</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">hgdc@workspace:~/portfolio$</span>
+                        <span class="cursor">_</span>
+                    </div>
+                </div>
+            </div>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar" id="loaderProgress"></div>
+                <div class="loader-percentage" id="loaderPercent">0%</div>
+            </div>
+            <div class="hack-lines">
+                <div class="hack-line"></div>
+                <div class="hack-line"></div>
+                <div class="hack-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="header-container">
+            <nav class="nav">
+                <a href="#home" class="nav-brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <span class="brand-text">João Pedro Moura Santos</span>
+                </a>
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <span class="nav-text">Home</span>
+                    </a>
+                    <a href="#hacks" class="nav-link" data-section="hacks">
+                        <span class="nav-text">Projects</span>
+                    </a>
+                    <a href="#about" class="nav-link" data-section="about">
+                        <span class="nav-text">About</span>
+                    </a>
+                    <a href="#services" class="nav-link" data-section="services">
+                        <span class="nav-text">Feedbacks</span>
+                    </a>
+                    <a href="#certifications" class="nav-link" data-section="certifications">
+                        <span class="nav-text">Certifications</span>
+                    </a>
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <span class="nav-text">Contact</span>
+                    </a>
+                </div>
+                <div class="nav-actions">
+                    <button class="dir-toggle" id="dirToggle" title="Toggle Direction">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span class="dir-text">Language</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section id="home" class="section hero">
+            <div class="hero-bg">
+                <canvas id="matrixCanvas"></canvas>
+                <div class="grid-overlay"></div>
+                <div class="scan-line"></div>
+                <div class="hack-particles" id="hackParticles"></div>
+            </div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <div class="badge-pulse"></div>
+                        <i class="fas fa-code"></i>
+                        <span> Full-Stack Developer</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-word" data-word="BUILDING">BEM VINDO</span>
+                        <span class="title-word highlight" data-word="DIGITAL">AO MEU </span>
+                        <span class="title-word" data-word="EXPERIENCES">PORTFOLIO</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="subtitle-text">BackEnd Developer</span>
+                        <span class="subtitle-separator">|</span>
+                        <span class="subtitle-text">JAVA</span>
+                        <span class="subtitle-separator">|</span>
+                        <span class="subtitle-text">Software Architecture</span>
+                        <span class="subtitle-separator">|</span>
+                        <span class="subtitle-text">Design Patterns</span>
+                        <span class="subtitle-separator">|</span>
+                        <span class="subtitle-text">React</span>
+                    </div>
+                   <p class="hero-description">
+Estudante de Engenharia de Software, com foco principal no desenvolvimento em Java. Possuo experiência em desenvolvimento Full-Stack (Spring Boot, React), automação de processos (RPA) e modelagem de dados (SQL). Atualmente, atuo na Agência Experimental da PUC Minas e no CRC - Centro de Recursos Computacionais, além de estar desenvolvendo um projeto dedicado a uma empresa de eventos musicais. Meu objetivo é criar lógicas de negócios complexas, resolver problemas do mundo real e construir soluções web robustas e inovadoras.
+                   </p>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="6"></div>
+                                <div class="stat-label">Projetos</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="2">0</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="15">0</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="1">0</div>
+                                <div class="stat-label">Recomendações</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Entre em contato</span>
+                            <i class="fas fa-paper-plane"></i>
+                            <div class="btn-shine"></div>
+                        </a>
+                        <a href="./João Pedro Moura Santos - currículo.pdf" download="João Pedro Moura - curriculo.pdf" class="btn btn-secondary">
+                            <span>Download Resume</span>
+                            <i class="fas fa-file-download"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="security-monitor expanded">
+                        <div class="monitor-frame">
+                            <div class="monitor-screen">
+                                <div class="screen-content">
+                                    <div class="screen-header">
+                                        <div class="screen-dots">
+                                            <span class="red"></span>
+                                            <span class="yellow"></span>
+                                            <span class="green"></span>
+                                        </div>
+                                        <div class="screen-title">COMMAND CENTER - JOÃO PEDRO MOURA</div>
+                                        <div class="screen-status">SYSTEMS: <span class="online">ONLINE</span></div>
+                                    </div>
+                                    <div class="screen-body metrics-grid">
+
+                                        <div class="metric-group">
+                                            <h4 class="metric-title"><i class="fas fa-history"></i> Coding Activity
+                                                (WakaTime)</h4>
+                                            <img src="https://helio-github-stats.vercel.app/api/wakatime?username=JoaoMouraS&custom_title=Tempo+de+Código&card_width=466&layout=compact&display_format=time&theme=dark"
+                                                class="waka-img" alt="WakaTime">
+                                            <img src="https://helio-github-stats.vercel.app/api/wakatime?username=JoaoMouraS&custom_title=Linguagens&card_width=466&layout=default&display_format=time&theme=dark"
+                                                class="waka-img" alt="WakaTime Langs">
+                                        </div>
+
+                                        <div class="metric-group">
+                                            <h4 class="metric-title"><i class="fab fa-github"></i> GitHub Overview</h4>
+                                            <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=JoaoMouraS&theme=github_dark"
+                                                class="waka-img" alt="Profile Details">
+                                            <img src="https://github-streak-stats-ruby.vercel.app/?user=JoaoMouraS&theme=dark&hide_border=true&locale=pt_BR"
+                                                class="waka-img" alt="GitHub Streak">
+                                        </div>
+
+                                        <div class="metric-group full-width">
+                                            <h4 class="metric-title"><i class="fas fa-snake"></i> Contribution Grid</h4>
+                                            <div class="flex-row">
+                                                <img src="https://helio-github-stats.vercel.app/api/top-langs?username=JoaoMouraS&layout=pie&theme=dark&hide_border=true&card_width=300"
+                                                    class="waka-img compact" alt="Top Langs">
+                                                <img src="https://joaopauloaramuni.github.io/image/github-user-contribution.svg"
+                                                    class="waka-img snake" alt="Snake Game">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="monitor-stand"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+            <!-- O que estou desenvolvendo agora -->
+        </section>
+
+        <section id="current-project" class="section">
+    <div class="section-bg">
+        <div class="section-pattern"></div>
+    </div>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">0X</span> <!-- Atualize o número da seção conforme a ordem -->
+            <h2 class="section-title">
+                <span class="title-text">Em Desenvolvimento</span>
+                <span class="title-underline"></span>
+            </h2>
+        </div>
+        
+        <div class="current-project-wrapper" style="background: rgba(10, 14, 26, 0.7); border: 1px solid var(--primary-color); border-radius: 8px; padding: 30px; box-shadow: 0 0 20px rgba(0, 255, 136, 0.1); position: relative; overflow: hidden;">
+            
+            <!-- Efeito visual de scanline no fundo do card -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(transparent 50%, rgba(0, 255, 136, 0.02) 50%); background-size: 100% 4px; pointer-events: none;"></div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0, 255, 136, 0.2); padding-bottom: 15px; margin-bottom: 20px;">
+                <h3 style="color: var(--primary-color); font-size: 1.5rem; margin: 0; font-family: 'Orbitron', sans-serif;">
+                    <i class="fas fa-satellite-dish" style="margin-right: 10px;"></i> 
+                    Live Feed
+                </h3>
+                <span style="background: rgba(0, 255, 136, 0.1); color: var(--primary-color); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-family: 'Fira Code', monospace; display: flex; align-items: center; gap: 8px;">
+                    <span class="dot green" style="width: 8px; height: 8px; border-radius: 50%; background-color: #00ff88; box-shadow: 0 0 8px #00ff88; display: inline-block;"></span>
+                    Status: Coding...
+                </span>
+            </div>
+            
+            <div class="project-details" style="position: relative; z-index: 1;">
+                <h4 style="font-size: 1.3rem; margin-bottom: 10px; color: #fff;">Plataforma de Eventos Musicais para a empresa Boteco do Hudson</h4>
+                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 25px;">
+                    Desenvolvimento de um sistema completo dedicado à gestão e engajamento no cenário de eventos musicais. O objetivo é aplicar conceitos avançados de arquitetura backend, padrões de projeto Desenhos de Sistemas para criar uma aplicação robusta, escalável e de alta performance.
+                </p>
+                
+                <div class="tech-stack" style="margin-bottom: 30px;">
+                    <h5 style="color: #fff; margin-bottom: 15px; font-family: 'Fira Code', monospace; font-size: 1rem;">> Techs & Frameworks_</h5>
+                    <div class="tech-badges" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <span class="badge" style="background: rgba(0, 255, 136, 0.05); border: 1px solid var(--primary-color); padding: 6px 12px; border-radius: 4px; color: var(--primary-color); font-size: 0.9rem;">Java</span>
+                        <span class="badge" style="background: rgba(0, 255, 136, 0.05); border: 1px solid var(--primary-color); padding: 6px 12px; border-radius: 4px; color: var(--primary-color); font-size: 0.9rem;">Spring Boot</span>
+                        <span class="badge" style="background: rgba(0, 255, 136, 0.05); border: 1px solid var(--primary-color); padding: 6px 12px; border-radius: 4px; color: var(--primary-color); font-size: 0.9rem;">PostgreSQL</span>
+                        <span class="badge" style="background: rgba(0, 255, 136, 0.05); border: 1px solid var(--primary-color); padding: 6px 12px; border-radius: 4px; color: var(--primary-color); font-size: 0.9rem;">React</span>
+                        <span class="badge" style="background: rgba(0, 255, 136, 0.05); border: 1px solid var(--primary-color); padding: 6px 12px; border-radius: 4px; color: var(--primary-color); font-size: 0.9rem;">Python</span>
+                        <span class="badge" style="background: rgba(0, 255, 136, 0.05); border: 1px solid var(--primary-color); padding: 6px 12px; border-radius: 4px; color: var(--primary-color); font-size: 0.9rem;">RabbitMQ</span>
+                        <span class="badge" style="background: rgba(0, 255, 136, 0.05); border: 1px solid var(--primary-color); padding: 6px 12px; border-radius: 4px; color: var(--primary-color); font-size: 0.9rem;">FaceID</span>
+                        <span class="badge" style="background: rgba(0, 255, 136, 0.05); border: 1px solid var(--primary-color); padding: 6px 12px; border-radius: 4px; color: var(--primary-color); font-size: 0.9rem;">Microsserviços</span>
+                    </div>
+                </div>
+
+                <div class="project-actions">
+                    <a href="https://github.com/JoaoMouraS/Projeto_BotecoDoHudson.git" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+                        <i class="fab fa-github"></i>
+                        <span>Acessar Repositório Atual</span>
+                        <div class="btn-shine"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+       <section id="hacks" class="section hacks-section">
+    <div class="section-bg">
+        <div class="section-pattern"></div>
+    </div>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">
+                <span class="title-text">Projects</span>
+                <span class="title-underline"></span>
+            </h2>
+        </div>
+        <div class="hacks-slider">
+            <div class="slider-main-container">
+                <div class="slider-viewport">
+                    <div class="slider-track" id="sliderTrack">
+                        
+                        <div class="slider-slide active">
+                            <div class="slide-card project-card" 
+                                 onclick="window.open('https://github.com/JoaoMouraS/Apptite', '_blank')">
+                                <img src="GIFS/APPTITE.gif" alt="Demonstração do Apptite" class="slide-cover-img">
+                                <div class="slide-overlay"></div>
+                                <div class="slide-content-wrapper">
+                                    <div class="slide-icon-container">
+                                        <i class="fas fa-utensils"></i>
+                                    </div>
+                                    <h3 class="slide-title">Apptite</h3>
+                                    <p class="slide-description">Busca personalizada de restaurantes com filtros inteligentes de culinária e preço.</p>
+                                    
+                                    <div class="tech-badges">
+                                        <span class="badge">Java</span>
+                                        <span class="badge">Spring Boot</span>
+                                        <span class="badge">UX Design</span>
+                                    </div>
+
+                                    <div class="click-hint"><i class="fab fa-github"></i> View on GitHub</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-slide">
+                            <div class="slide-card project-card" 
+                                 onclick="window.open('https://JoaoMouraS.github.io/GitHubCopilot-CodigonaPratica/', '_blank')">
+                                <img src="GIFS/ECOCalc.gif" alt="Demonstração do ECOCalc" class="slide-cover-img">            
+                                <div class="slide-overlay"></div>
+                                <div class="slide-content-wrapper">
+                                    <div class="slide-icon-container">
+                                        <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <h3 class="slide-title">Eco Calc</h3>
+                                    <p class="slide-description">Calculadora de impacto ambiental em rotas brasileiras, desenvolvida com IA aplicada.</p>
+                                    
+                                    <div class="tech-badges">
+                                        <span class="badge">JavaScript</span>
+                                        <span class="badge">GitHub Copilot</span>
+                                        <span class="badge">NLP</span>
+                                    </div>
+
+                                    <div class="click-hint"><i class="fas fa-external-link-alt"></i> Live Demo</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-slide">
+                            <div class="slide-card project-card" 
+                                 onclick="window.open('https://github.com/JoaoMouraS/ThivorAutomoveis', '_blank')">
+                                 <img src="GIFS/THIVOR.gif" alt="Demonstração do Thivor Automoveis" class="slide-cover-img">            
+                                <div class="slide-overlay"></div>
+                                <div class="slide-content-wrapper">
+                                    <div class="slide-icon-container">
+                                        <i class="fas fa-code-branch"></i>
+                                    </div>
+                                    <h3 class="slide-title">Thivor Automoveis</h3>
+                                    <p class="slide-description">Desenvolvimento de um sistema de gerenciamento para concessionária de veículos.</p>
+                                    
+                                    <div class="tech-badges">
+                                        <span class="badge">React</span>
+                                        <span class="badge">Java</span>
+                                    </div>
+
+                                    <div class="click-hint"><i class="fab fa-github"></i> View Repository</div>
+                                </div>
+                            </div>
+                        </div>
+
+                          <div class="slider-slide">
+                            <div class="slide-card project-card" 
+                                 onclick="window.open('https://github.com/JoaoMouraS/Bootcamp_Blip', '_blank')">
+                                
+                                <div class="slide-overlay"></div>
+                                <div class="slide-content-wrapper">
+                                    <div class="slide-icon-container">
+                                        <i class="fas fa-code-branch"></i>
+                                    </div>
+                                    <h3 class="slide-title">Blip Logic</h3>
+                                    <p class="slide-description">Fundamentos de lógica de programação e estruturação de dados complexos em JSON.</p>
+                                    
+                                    <div class="tech-badges">
+                                        <span class="badge">JavaScript</span>
+                                        <span class="badge">JSON</span>
+                                        <span class="badge">Algorithms</span>
+                                    </div>
+
+                                    <div class="click-hint"><i class="fab fa-github"></i> View Repository</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="slider-slide">
+                            <div class="slide-card project-card" 
+                                 onclick="window.open('https://investlux.netlify.app', '_blank')">
+                                 <img src="GIFS/InvestLux.gif" alt="Demonstração do InvestLux" class="slide-cover-img">            
+                                <div class="slide-overlay"></div>
+                                <div class="slide-content-wrapper">
+                                    <div class="slide-icon-container">
+                                        <i class="fas fa-code-branch"></i>
+                                    </div>
+                                    <h3 class="slide-title">InvestLux</h3>
+                                    <p class="slide-description">Desenvolvimento de um sistema de gerenciamento para investimentos.</p>
+                                    
+                                    <div class="tech-badges">
+                                        <span class="badge">HTML</span>
+                                        <span class="badge">CSS</span>
+                                        <span class="badge">JavaScript</span>
+                                    </div>
+
+                                    <div class="click-hint"><i class="fab fa-github"></i> View Site</div>
+                                </div>
+                            </div>
+                        </div>                        
+
+
+                            <div class="slider-slide">
+                            <div class="slide-card project-card" 
+                                 onclick="window.open('https://planteicspc.vercel.app/', '_blank')">
+                                 <img src="GIFS/Plantei.gif" alt="Demonstração do Plantei" class="slide-cover-img">            
+                                <div class="slide-overlay"></div>
+                                <div class="slide-content-wrapper">
+                                    <div class="slide-icon-container">
+                                        <i class="fas fa-code-branch"></i>
+                                    </div>
+                                    <h3 class="slide-title">Plantei</h3>
+                                    <p class="slide-description">Plataforma de aprendizado sobre plantas e jardinagem. Desenvolvido para um cliente real.</p>
+                                    
+                                    <div class="tech-badges">
+                                        <span class="badge">React</span>
+                                        <span class="badge">Java</span>
+                                        <span class="badge">JavaScript</span>
+                                        <span class="badge">MYSQL</span>
+                                        <span class="badge">DOCKER</span>
+
+
+                                    </div>
+
+                                    <div class="click-hint"><i class="fab fa-github"></i> View Site</div>
+                                </div>
+                            </div>
+                        </div>    
+
+
+
+
+
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-nav-btn prev-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-indicators" id="sliderIndicators"></div>
+                    <button class="slider-nav-btn next-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="slider-footer">
+                    <div class="slider-counter">
+                        <span class="current-slide" id="currentSlide">01</span>
+                        <span class="slide-separator">/</span>
+                        <span class="total-slides" id="totalSlides">03</span>
+                    </div>
+                    <div class="slider-progress-wrapper">
+                        <div class="slider-progress-bar">
+                            <div class="slider-progress-fill" id="sliderProgress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+       <section id="about" class="section about-section">
+    <div class="section-bg">
+        <div class="section-pattern"></div>
+    </div>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">
+                <span class="title-text">Sobre Mim</span>
+                <span class="title-underline"></span>
+            </h2>
+        </div>
+        <div class="about-wrapper">
+<div class="about-intro-section">
+                <div class="about-badge">
+                    <i class="fas fa-code-branch"></i>
+                    <span>Software Engineering Student & Developer</span>
+                </div>
+                 <div class="about-text perfil-joao-pedro">
+                    <p>
+                        Sou estudante de Engenharia de Software (PUC Minas) e desenvolvedor Full-stack com forte atuação no ecossistema de backend (Java, Spring Boot, Python). Tenho interesse em aprender sobre Desing Sistems, Arquitetura de Software e Desing Patterns, construindo sistemas que vão desde a automação corporativa até plataformas de impacto social.
+                    </p>
+
+                    <br>
+                    
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">🚀 O que eu construo e os impactos que gero</h3>
+                    <ul style="list-style-type: none; padding-left: 0; display: flex; flex-direction: column; gap: 15px;">
+                        <li>
+                            <strong>Automação de Processos e RPA (MRV):</strong> Desenvolvi scripts em Python e integrações com SAP S/4HANA.
+                            <br><span style="color: var(--text-secondary);">↳ <em>O que melhorou:</em> Eliminação de gargalos operacionais, reduzindo drasticamente a perda de tempo e a taxa de erros na esteira de produção.</span>
+                        </li>
+                        <li>
+                            <strong>IA e Transformação Digital (AES):</strong> Atuei no desenvolvimento de uma IA para suporte técnico na MRV.
+                            <br><span style="color: var(--text-secondary);">↳ <em>O que melhorou:</em> Aprimoramento e otimização do processo de recebimento e controle tecnológico de concreto.</span>
+                        </li>
+                        <li>
+                            <strong>Plataformas Educacionais ("Plantei"):</strong> Criação de uma solução full-stack para o ambiente escolar.
+                            <br><span style="color: var(--text-secondary);">↳ <em>O que melhorou:</em> Aumento direto no interesse e no engajamento dos alunos com os estudos.</span>
+                        </li>
+                    </ul>
+
+                    <br>
+
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">🤝 Como eu trabalho</h3>
+                    <p>
+                        Valorizo a comunicação eficaz, a colaboração em equipe e a organização do código. Gosto de aprender novos desafios tanto quando Desenhar requisitos junto a Product Owners ou estruturar novos sistemas, meu foco é sempre a qualidade da entrega e o aprendizado contínuo.
+                    </p>
+                </div>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="about-features">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Backend & APIs</h3>
+                                <p class="feature-desc">Construção de lógicas de negócio e arquiteturas robustas utilizando Java, Spring Boot, Python e C/C++.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Dados & Automação</h3>
+                                <p class="feature-desc">Modelagem de dados (SQL Server, PostgreSQL, MySQL, GCP) e automação de processos corporativos com RPA e SAP S/4HANA.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Frontend Web</h3>
+                                <p class="feature-desc">Desenvolvimento de interfaces modernas, dinâmicas e intuitivas utilizando React e JavaScript.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Metodologias Ágeis</h3>
+                                <p class="feature-desc">Trabalho colaborativo e entregas incrementais utilizando versionamento (Git/GitHub) e frameworks como SCRUM e Kanban.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="security-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="terminal-title">DEVELOPER CONSOLE</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">whoami</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output">João Pedro Moura</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">ls current_projects/</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output">Plantei_Platform/</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output">ThivorAutomoveis/</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output">Automacao_MRV/</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output success">[✓] System check: Full-stack skills loaded successfully!</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="cursor">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="services" class="section services-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Feedbacks</span>
+                        <span class="title-underline"></span>
+                    </h2>
+                </div>
+                <div class="feedback-container">
+                    <div class="service-card feedback-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-comment-alt"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                        </div>
+                        <h3 class="service-title feedback-heading">Deixe seu feedback</h3>
+                        <form id="feedbackForm" class="feedback-form">
+                            <div class="form-group">
+                                <label for="feedbackName">Nome</label>
+                                <input type="text" id="feedbackName" required placeholder="Seu nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="feedbackMessage">Mensagem</label>
+                                <textarea id="feedbackMessage" required placeholder="Sua mensagem"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                    <div id="feedbackList" class="feedback-list"></div>
+                </div>
+            </div>
+        </section>
+
+     <section id="certifications" class="section certs-section">
+    <div class="section-bg">
+        <div class="section-pattern"></div>
+    </div>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">
+                <span class="title-text">Certificações</span>
+                <span class="title-underline"></span>
+            </h2>
+        </div>
+        <div class="certs-grid">
+            <div class="cert-card">
+                <div class="cert-badge">
+                    <i class="fab fa-aws"></i>
+                    <div class="badge-pulse"></div>
+                </div>
+                <h3 class="cert-title">AWS</h3>
+                <p class="cert-name">AWS Lambda Foundations</p>
+                <p class="cert-org">Amazon Web Services</p>
+                <div class="cert-year">2026</div>
+                <div class="cert-glow"></div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-badge">
+                    <i class="fas fa-code"></i>
+                    <div class="badge-pulse"></div>
+                </div>
+                <h3 class="cert-title">Lógica</h3>
+                <p class="cert-name">Lógica de Programação (27h)</p>
+                <p class="cert-org">Blip / DIO</p>
+                <div class="cert-year">2026</div>
+                <div class="cert-glow"></div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-badge">
+                    <i class="fas fa-flask"></i>
+                    <div class="badge-pulse"></div>
+                </div>
+                <h3 class="cert-title">AES</h3>
+                <p class="cert-name">Agência Experimental de Software</p>
+                <p class="cert-org">PUC Minas</p>
+                <div class="cert-year">2025</div>
+                <div class="cert-glow"></div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-badge">
+                    <i class="fas fa-brain"></i>
+                    <div class="badge-pulse"></div>
+                </div>
+                <h3 class="cert-title">ML Intro</h3>
+                <p class="cert-name">Introdução ao Machine Learning</p>
+                <p class="cert-org">Hype Data & AI</p>
+                <div class="cert-year">2025</div>
+                <div class="cert-glow"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="contact" class="section contact-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Contact</span>
+                        <span class="title-underline"></span>
+                    </h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:joaopedros639@gmail.com">joaopedros639@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefone</h4>
+                                <a href="tel:+1234567890">+55 31 98920-6085</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Localização</h4>
+                                <span>Belo Horizonte - MG</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" id="nome" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input type="text" id="assunto" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea id="mensagem" class="form-input form-textarea" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                            <div class="btn-shine"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+
+        
+    
+
+    </main>
+
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p class="copyright">© 2026 João Pedro Moura Santos. Todos os direitos reservados.</p>
+            <div class="footer-social">
+                <a href="https://github.com/JoaoMouraS" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/joaomourasantos/" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module" src="Portfolio.js"></script>
+
+
+
+</body>
+
+</html>
